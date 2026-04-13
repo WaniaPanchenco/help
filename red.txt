@@ -10,3 +10,16 @@ systemctl restart ovirt-engine
 Хранилище - Домены - Новый домен - тип хранилища "локально на хосте", имя "data", путь /srv/data
 Хранилище - Диски - Загрузить - запуск (загрузка образов)
 Дальше идем в портал виртуальных машин
+
+
+scp /home/kali/Desktop/disc1.vmdk user@192.168.20.10:/home/user/dis (папку dis создаем)
+
+
+qm importdisk 100 /home/alt/disk.vmdk local — format vmdk (local это имя стораджа, 100 это идентификатор машины)
+Дальше идем в порядок загрузки
+
+
+qemu-img convert -f vmdk -O qcow2 file.vmdk filenew.qcow2
+
+sudo apt update
+sudo apt install qemu-utils
