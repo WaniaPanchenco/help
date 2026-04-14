@@ -14,6 +14,8 @@ systemctl restart ovirt-engine
 
 scp /home/kali/Desktop/disc1.vmdk user@192.168.20.10:/home/user/dis (папку dis создаем)
 
+Идем создаем кластер
+
 
 qm importdisk 100 /home/alt/disk.vmdk local — format vmdk (local это имя стораджа, 100 это идентификатор машины)
 Дальше идем в порядок загрузки
