@@ -15,9 +15,11 @@ systemctl restart ovirt-engine
 scp /home/kali/Desktop/disc1.vmdk user@192.168.20.10:/home/user/dis (папку dis создаем)
 
 Идем создаем кластер
+Не забываем создать пустую виртуалку, потом идем в host2 - сеть и создаем бридж (Имя vmbr0, CIDR 192.168.30.50/24 Шлюз 192.168.30.1)    Если ошибка - то перезагрузить apt-get
 
+перед format всегда идет два минуса
 
-qm importdisk 100 /home/alt/disk.vmdk local — format vmdk (local это имя стораджа, 100 это идентификатор машины)
+qm importdisk 100 /home/alt/disk.vmdk local —format vmdk (local это имя стораджа, 100 это идентификатор машины)
 Дальше идем в порядок загрузки
 
 
