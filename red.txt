@@ -16,9 +16,18 @@ mkdir -p /var/www/redadm
 mkdir -p /var/www/red
 cp /home/user/Загрузки/redadm-enterprise.rpm /var/www/reddc
 cp /home/user/Загрузки/redadm-enterprise.rpm /var/www/redadm
-nano /etc/redadm/server.conf (пропускаем)
-заходим по айпи бриджа и вводим лицензионный ключ
+nano /etc/redadm/server.conf
+db user - redadm
+db password - Qwerty_123456!
 
+username_LDAP - user
+password_LDAP - 1111
+заходим по айпи бриджа и вводим лицензионный ключ
+redadm
+Qwerty_123456!
+user
+1111
+Не забываем перезагружаться, если есть ошибки или проблемы
 
 scp /home/kali/Desktop/disc1.vmdk user@192.168.20.10:/home/user/dis (папку dis создаем)
 
