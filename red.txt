@@ -3,3 +3,7 @@ strings unknown_file | grep -iE "flag|key|ctf|password|secret"
 binwalk -e unknown_file
 
 zsteg -a PNG
+
+vlan.id==60
+stp.flags.tp==1 (первый stp)
+tcp.flags.syn==1
