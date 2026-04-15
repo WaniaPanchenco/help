@@ -45,6 +45,8 @@ qemu-img convert -f vmdk -O qcow2 file.vmdk filenew.qcow2
 sudo apt update
 sudo apt install qemu-utils
 
+genisoimage -o output.iso -R -J /path/to/directory
+
 sudo dnf install libvirt qemu-kvm virt-install virt-manager openssh-askpass OVMF boost-random boost-program-options boost-regex bridge-utils
 
 
