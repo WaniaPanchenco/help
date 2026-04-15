@@ -1,1 +1,5 @@
+file unknown_file
+strings unknown_file | grep -iE "flag|key|ctf|password|secret"
+binwalk -e unknown_file
 
+zsteg -a PNG
