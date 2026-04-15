@@ -37,6 +37,8 @@ scp /home/kali/Desktop/disc1.vmdk user@192.168.20.10:/home/user/dis (папку 
 перед format всегда идет два минуса
 
 qm importdisk 100 /home/alt/disk.vmdk local —format vmdk (local это имя стораджа, 100 это идентификатор машины)
+virsh attach-disk <имя_ВМ> dick1C.qcow2 vda --persistent --driver qemu --subdriver qcow2
+
 Дальше идем в порядок загрузки
 
 
