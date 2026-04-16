@@ -1,5 +1,6 @@
-wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add
 sudo wget https://archive.kali.org/archive-keyring.gpg -O /usr/share/keyrings/kali-archive-keyring.gpg
+или
+curl -fsSL https://archive.kali.org/archive-keyring.gpg | sudo tee /usr/share/keyrings/kali-archive-keyring.gpg > /dev/null
 
 sudo apt update
 file unknown_file
