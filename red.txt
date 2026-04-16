@@ -8,6 +8,13 @@ strings unknown_file | grep -iE "flag|key|ctf|password|secret"
 binwalk -e unknown_file
 exiftool unknown_file
 
+pngcheck -v 
+‎
+‎xxd файл | grep -A5 -By -i "flag\|ctf"
+‎
+‎pngseek
+‎
+
 zsteg -a PNG
 exiftool image.jpg | grep -i flag
 gdb ./file
