@@ -1,3 +1,6 @@
+wget -q -O - https://archive.kali.org/archive-key.asc | sudo apt-key add
+
+sudo apt update
 file unknown_file
 strings unknown_file | grep -iE "flag|key|ctf|password|secret"
 binwalk -e unknown_file
@@ -5,7 +8,22 @@ exiftool unknown_file
 
 zsteg -a PNG
 exiftool image.jpg | grep -i flag
+gdb ./file
+
+Открыл бинарник -> Search -> For Strings -> Filter: "flag".
+
+Shift+F12 (Ida Pro)
+
+sudo apt install openjdk-17-jdk -y
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.2.1_build/ghidra_11.2.1_PUBLIC_20241105.zip
+
+sudo unzip ghidra_11.2.1_PUBLIC_*.zip -d /opt
+sudo ln -s /opt/ghidra_11.2.1_PUBLIC/ghidraRun /usr/local/bin/ghidra
+
 
 vlan.id==60
 stp.flags.tp==1 (первый stp)
 tcp.flags.syn==1
+
+sudo apt update && sudo apt install qemu-utils
+qemu-img convert -f vmdk -O qcow2 /path/to/mydisk.vmdk /path/to/mydisk.qcow2
