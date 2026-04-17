@@ -36,3 +36,20 @@ tcp.flags.syn==1
 
 sudo apt update && sudo apt install qemu-utils
 qemu-img convert -f vmdk -O qcow2 /path/to/mydisk.vmdk /path/to/mydisk.qcow2
+
+
+rd.break enforcing=0
+‎mount -o remount,rw /sysroot
+‎chroot /sysroot
+‎passwd root
+‎touch /.autorelabel
+‎exit
+‎exit
+‎reboot
+‎
+‎ip addr add 192.168.20.21/24 dev ens33
+‎ip route add default via 192.168.20.1
+‎
+‎systemctl restart tomcat
+‎systemctl stop firewalld
+‎
